@@ -21,7 +21,7 @@
             $.sidr('close', 'sidr-main');
             $('body').toggleClass('__showcontact');
         });
-        $('._equal, ._equal-block .block_content').matchHeight({
+        $('._equal, ._equal-block .block_content, .__equalheight').matchHeight({
             byRow: true
         });
         // Changing the defaults
