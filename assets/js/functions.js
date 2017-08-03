@@ -21,9 +21,13 @@
             $.sidr('close', 'sidr-main');
             $('body').toggleClass('__showcontact');
         });
-        $('._equal, ._equal-block .block_content, .__equalheight').matchHeight({
-            byRow: true
-        });
+
+        function equalfunc() {
+            $('._equal, ._equal-block .block_content, .__equalheight').matchHeight({
+                byRow: true
+            });
+        }
+        setTimeout(equalfunc, 500);
         // Changing the defaults
         window.sr = ScrollReveal({ reset: true });
 
