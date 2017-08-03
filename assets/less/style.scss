@@ -334,7 +334,7 @@ footer {
   }
 }
 
-input.text-input {
+input.text-input, input.form-text {
   box-sizing: border-box;
   width: 100%;
   background: white;
@@ -1140,13 +1140,13 @@ ul.social_links {
   -o-transition: all .3s ease-in;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
-  .tooltipmapster_header{
+  &>div:first-child{
     background: $dark-primary;
     padding: 10px;
     color: white;
     font: 600 18px/1.4 $font-family-mont;
   }
-  .tooltipmapster_text{
+  &>div:first-child+div{
     padding: 10px;
     p{
       margin: 0 0 15px 0;
@@ -1169,22 +1169,25 @@ ul.social_links {
     float: left;
     font: 300 18px/1.2 $font-family-roboto;
     width: 30%;
+    margin-right: 0;
+    position: relative;
+    top: 10px;
   }
-  .text-input{
+  .text-input, .form-text{
     border: 1px solid #e5e5e5;
   }
-  input.text-input
+  input.text-input, input.form-text
   {
     width: 69%;
     float: right;
   }
-  textarea.text-input
+  textarea.text-input, textarea.form-textarea
   {
     resize: none;
     width: 100%;
     max-height: 200px;
   }
-  .form-action{
+  .form-action, .form-actions{
     text-align: center;
   }
   .form-submit
