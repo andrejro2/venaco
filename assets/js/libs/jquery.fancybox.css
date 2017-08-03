@@ -96,10 +96,10 @@
 .fancybox-close {
 	position: absolute;
 	background: url(close.png) no-repeat center center;
-	bottom: 10px;
+	top: 10px;
 	right: 10px;
-	width: 19px;
-	height: 19px;
+	width: 24px;
+	height: 24px;
 	cursor: pointer;
 	z-index: 8040;
 }
