@@ -312,7 +312,7 @@ a#simple-menu {
 
 footer {
   background: $grey;
-  padding: 30px 0 117px 0;
+  padding: 30px 0 0 0;
   @media (max-width: $screen-xs-max) {
     padding: 20px 0 40px 0;
   }
@@ -324,7 +324,6 @@ footer {
     border-bottom: 1px solid white;
   }
   .block_content {
-    border-bottom: 1px solid white;
     padding: 30px 0 15px 0;
     font-size: 16px;
     p {
@@ -333,7 +332,22 @@ footer {
     }
   }
 }
-
+.underfooter
+{
+  font: 300 16px/1.4 $font-family-roboto;
+  border-bottom: 6px solid $grey;
+  background: #cccccc;
+  padding: 20px 20px;
+  p{
+    margin: 0 auto;
+    &.copyright{
+      max-width: 280px;
+      border-bottom: 1px solid white;
+      padding: 0 0 15px 0;
+      margin-bottom: 15px;
+    }
+  }
+}
 input.text-input, input.form-text {
   box-sizing: border-box;
   width: 100%;
@@ -894,6 +908,14 @@ ul.social_links {
     background: #316cbd;
     color: white;
     position: relative;
+    padding-top: 30px;
+    .section-title
+    {
+      color: white;
+      position: relative;
+      margin: 0 0 30px 0;
+      z-index: 2;
+    }
     &:before{
       background: #316cbd;
       width: 90vw;
@@ -912,9 +934,9 @@ ul.social_links {
 
     h5{
       position: relative;
-      padding: 0 0 27px 0;
-      margin: 0 0 10px 0;
-      font: 400 20px/1.2 $font-family-roboto;
+      padding: 0 0 23px 0;
+      margin: 0 0 17px 0;
+      font: 300 19px/1.2 $font-family-roboto;
       &:after{
         content: "";
         height: 6px;
@@ -927,7 +949,15 @@ ul.social_links {
     }
     &-text{
       padding: 0 0 31px 0;
+      font: 400 16px/1.2 $font-family-roboto;
+      a{
+        color: white;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
       p{
+        line-height: 1.4;
         @media (max-width: 1280px) {
           font-size: 12px;
         }
@@ -938,17 +968,15 @@ ul.social_links {
     }
     &-img{
       position: relative;
-      margin-top: -151px;
+      margin-top: 15px;
+      max-width: 195px;
       @media (max-width: $screen-sm-max) {
-        margin-top: 20px;
+        margin-top: 15px;
       }
     }
     &-wrapper
     {
-      padding: 200px 0 0 0 ;
-      @media (max-width: $screen-sm-max) {
-        padding: 30px 0 0 0 ;
-      }
+      padding: 20px 0 0 0;
     }
   }
 }
@@ -992,22 +1020,57 @@ ul.social_links {
       &.__grey
       {
         background: #ebebeb;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+        &.__active{
+          background: $brand-primary;
+        }
+      }
+      &.__blue
+      {
+        background: #316cbd;
+        color: white;
+        margin-bottom: 15px;
+        cursor: pointer;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+        &:hover, &.__active{
+          background: #505864;
+        }
       }
       &.__primary
       {
         background: $brand-primary;
         max-width: 315px;
         margin: 0 auto;
+
         &:after {
           content: "";
           position: absolute;
           top: 100%;
           left: 50%;
-          margin: 5px 0 0 -8px;
+          margin: 5px 0 0 -16px;
           height: 53px;
-          background: url(../images/black_arrow.png) no-repeat bottom center;
-          width: 16px;
+          background: url(../images/black_arrow2.png) no-repeat bottom center;
+          width: 32px;
         }
+        &.__active
+        {
+          i{
+            border: 3px solid white;
+          }
+        }
+        i{
+          border: 3px solid transparent;
+          &:hover{
+            border: 3px solid white;
+          }
+        }
+
       }
       &.__black
       {
@@ -1016,46 +1079,62 @@ ul.social_links {
         max-width: 489px;
         margin: 0 auto;
         position: relative;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
         &:after {
           content: "";
           position: absolute;
           top: 100%;
           left: 50%;
-          margin: 5px 0 0 -8px;
+          margin: 5px 0 0 -16px;
           height: 40px;
-          background: url(../images/black_arrow.png) no-repeat top center;
-          width: 16px;
+          background: url(../images/black_arrow2.png) no-repeat top center;
+          width: 32px;
         }
-        &:before {
+        &.__active
+        {
+          i{
+            border: 3px solid white;
+          }
+        }
+        i{
+          border: 3px solid transparent;
+          &:hover{
+            border: 3px solid white;
+          }
+        }
+     /*   &:before {
           content: "";
           position: absolute;
           top: 100%;
           left: 30%;
-          margin: 5px 0 0 -8px;
+          margin: 5px 0 0 -16px;
           height: 40px;
-          background: url(../images/black_arrow.png) no-repeat bottom center;
-          width: 16px;
-        }
+          background: url(../images/black_arrow2.png) no-repeat bottom center;
+          width: 32px;
+        }*/
         &>div{
-          &:before {
+       /*   &:before {
             content: "";
             position: absolute;
             top: 100%;
             left: 70%;
-            margin: 5px 0 0 -8px;
+            margin: 5px 0 0 -16px;
             height: 40px;
-            background: url(../images/black_arrow.png) no-repeat bottom center;
-            width: 16px;
-          }
+            background: url(../images/black_arrow2.png) no-repeat bottom center;
+            width: 32px;
+          }*/
           &:after {
             content: "";
             position: absolute;
             top: 100%;
             left: 99.9%;
-            margin: 5px 0 0 -8px;
+            margin: 5px 0 0 -16px;
             height: 156px;
-            background: url(../images/black_arrow.png) no-repeat bottom center;
-            width: 16px;
+            background: url(../images/black_arrow2.png) no-repeat bottom center;
+            width: 32px;
           }
           &>div{
             &:before {
@@ -1063,10 +1142,10 @@ ul.social_links {
               position: absolute;
               top: 100%;
               left: .1%;
-              margin: 5px 0 0 -8px;
+              margin: 5px 0 0 -16px;
               height: 156px;
-              background: url(../images/black_arrow.png) no-repeat bottom center;
-              width: 16px;
+              background: url(../images/black_arrow2.png) no-repeat bottom center;
+              width: 32px;
             }
             &:after{
               content: "";
@@ -1128,7 +1207,7 @@ ul.social_links {
     top: 50px;
     left: 0;
     right: 0;
-
+    z-index: 2;
   }
 }
 .tooltipmapster{
@@ -1186,6 +1265,7 @@ ul.social_links {
     resize: none;
     width: 100%;
     max-height: 200px;
+    border: 1px solid #e5e5e5;
   }
   .form-action, .form-actions{
     text-align: center;
@@ -1202,5 +1282,63 @@ ul.social_links {
     font: 600 16px/36px $font-family-roboto;
     padding: 0 15px;
     border-radius: 18px;
+  }
+}
+
+.topsheme
+{
+  background: url(../images/services_bg.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 820px;
+  padding: 109px 0 0 0 ;
+  h1{
+    margin: 0 0 60px 0;
+    font: 600 64px/1.2 $font-family-mont;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $screen-sm-max) {
+      font: 600 34px/1.2 $font-family-mont;
+    }
+  }
+  h2{
+    margin: 0 0 30px 0;
+    font: 600 36px/1.2 $font-family-mont;
+    color: $dark-primary;
+    text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $screen-sm-max) {
+      font: 600 24px/1.2 $font-family-mont;
+    }
+  }
+}
+.services-block
+{
+  padding: 84px 0 20px 0;
+  &-item{
+    margin-bottom: 55px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 25px;
+    }
+    .services-block-wrapper
+    {
+      padding: 20px 30px 20px 100px;
+      background: #ebebeb;
+      font-size: 18px;
+      line-height: 1.4;
+      @media (max-width: $screen-sm-max) {
+        padding: 20px;
+        font-size: 16px;
+      }
+      h3{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 15px 0 20px 0;
+      }
+      &.__active{
+        background: $brand-primary;
+      }
+    }
   }
 }

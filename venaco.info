@@ -32,6 +32,7 @@ regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
 regions[footer]         = Footer
+regions[footer1]         = Footer 1
 regions[form1]         = Form 1
 regions[form2]         = Form 2
 regions[frontpopup] = front popup
