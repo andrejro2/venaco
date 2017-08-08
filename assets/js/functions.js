@@ -98,9 +98,47 @@
 
         $('.services-sv').hover(function () {
            var datahover = $(this).attr('data-hover').toString();
-            console.log(datahover);
             $(datahover).toggleClass('__active');
         });
 
+        $('#ap1,#ap3').mapster({
+            fillColor: '759cd3',
+            fillOpacity: 0.4
+        });
+        $('#ap2,#ap4').mapster({
+            fillColor: '69dfdf',
+            fillOpacity: 0.4
+        });
+        /*  window.wasScrolled = false;
+        if ($('#to').length) {
+            $(window).bind('scroll', function () {
+                if (!window.wasScrolled) {
+                    $('html, body').animate({scrollTop: document.getElementById('to').getBoundingClientRect().top - 100}, 400)
+                }
+                window.wasScrolled = true;
+            })
+        }*/
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
     });
+
 }(jQuery));

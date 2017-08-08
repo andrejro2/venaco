@@ -13,6 +13,7 @@ scripts[] = assets/js/libs/jquery.fancybox.pack.js
 scripts[] = assets/js/libs/jquery-scrolltofixed-min.js
 scripts[] = assets/js/libs/scrollreveal.min.js
 scripts[] = assets/js/libs/jquery.imagemapster.min.js
+scripts[] = assets/js/libs/jquery.stellar.min.js
 scripts[] = assets/js/functions.js
 
 regions[header] = Header
