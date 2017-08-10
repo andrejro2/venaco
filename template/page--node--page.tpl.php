@@ -19,7 +19,7 @@ print render($page['content']['metatags']);
                         print render($page['topmenu']);
                         ?>
                     </nav></div>
-               <!-- <div class="header-phone"><strong>+41 79 2637158</strong></div>-->
+                <!--<div class="header-phone"><strong>+41 79 2637158</strong></div>-->
                 <div class="header-flag">
                     <img src="/<?php
                     print  drupal_get_path('theme', 'venaco');
@@ -42,7 +42,10 @@ print render($page['content']['metatags']);
     <?php endif; ?>
     <?php if (!$is_front): ?>
         <?php if ($title): ?>
-        <section class="toptitle <?php print $classes_fornode ?>">
+        <?php
+            $nodeloaded = node_load(arg(1));
+        ?>
+        <section class="toptitle " style="background-image: url(<?php print file_create_url($nodeloaded->field_top_image['und'][0]['uri']) ?>)">
             <?php print render($title_prefix); ?>
             <h1><?php print $title; ?></h1>
             <?php print render($title_suffix); ?>
@@ -73,6 +76,9 @@ print render($page['content']['metatags']);
         </div>
     </div>
 </footer>
+<aside class="underfooter text-center">
+    <?php print render($page['footer1']); ?>
+</aside>
 <?php if ($page['form1']): ?>
     <div class="popup_form" id="inform" style="display: none">
         <div class="popup_form_wrapper">

@@ -17,7 +17,7 @@
   <meta name="author" content="axweb.sk">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Condensed:300,400,700&amp;subset=latin-ext" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto+Condensed:300,400,700&amp;subset=latin-ext" rel="stylesheet">
   <title><?php print $head_title; ?></title>
 
   <?php print $styles; ?>
@@ -35,5 +35,6 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 </div>
+<span id="back-to-top"></span>
 </body>
 </html>
