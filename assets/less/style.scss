@@ -444,6 +444,27 @@ ul.social_links {
 
 .aboutus {
   background: $brand-primary;
+  &-container-h1 {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    color: white;
+    max-width: 600px;
+    padding-left: 26px;
+    @media (max-width: 520px) {
+      position: static;
+      color: $dark-primary;
+    }
+    h1{
+      font: 600 46px/1.4 $font-family-mont;
+      @media (max-width: 1280px) {
+        font: 600 32px/1.4 $font-family-mont;
+      }
+      span{
+        display: block;
+      }
+    }
+  }
   &-content {
     padding: 63px 30px 50px 86px;
     max-width: 620px;
@@ -2042,4 +2063,37 @@ ul.social_links {
   display:block;
   height:180px;
   margin:-180px 0 0;
+}
+.thankyoupage
+{
+  background: #edeaea;
+  padding: 80px 0 80px 0;
+  h1{
+    font: 600 48px/1.2 $font-family-mont;
+    text-transform: uppercase;
+    margin: 50px 0 40px 0;
+  }
+  p{
+    font: 600 18px/1.45 $font-family-roboto;
+  }
+  .thankyobtn
+  {
+    margin: 40px 0 0 0;
+  }
+}
+.mailchimp-signup-subscribe-form
+{
+  label{
+    display: none;
+  }
+  .form-type-textfield
+  {
+    width: 66.66666667%;
+    float: left;
+  }
+  .form-actions
+  {
+    width: 33.33333333%;
+    float: left;
+  }
 }
