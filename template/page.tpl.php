@@ -35,9 +35,38 @@ print render($page['content']['metatags']);
 
                 <div class="video-background">
                     <div class="video-foreground">
-                        <?php if (!$is_mobile): ?><iframe
-                            src="https://www.youtube.com/embed/y7-afLVGva8?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=y7-afLVGva8"
-                            frameborder="0" allowfullscreen></iframe> <?php endif; ?>
+                        <?php if (!$is_mobile): ?>
+                            <!--<iframe
+                            src="https://www.youtube.com/embed/y7-afLVGva8?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=y7-afLVGva8&modestbranding=1"
+                            frameborder="0" allowfullscreen></iframe> -->
+                            <video id="my-video" class="video" muted loop>
+  <source src="<?php print file_create_url('public://venaco.mp4')?>" type="video/mp4">
+</video><!-- /video -->
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+<style type="text/css">
+    .video {
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+</style>
+                        <?php endif; ?>
                     </div>
                 </div>
 
