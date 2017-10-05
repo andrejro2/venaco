@@ -6,6 +6,7 @@
     </div>
     <?php print render($content['field_image']) ?>
     <?php print render($content['body']) ?>
+    <a href="<?php print $node_url ?>" class="blog_bottom_link"></a>
 <?php } ?>
 
 <?php if ($page) { ?>
