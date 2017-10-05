@@ -543,7 +543,14 @@ ul.social_links {
     }
   }
 }
-
+#hexagons .container{
+  position: relative;
+  z-index: 3;
+  top: -211px;
+  @media (max-width: $screen-sm-max) {
+   top: 20px;
+  }
+}
 .hexagons {
   background-image: url(../images/hexagon_bg.jpg);
   background-repeat: no-repeat;
@@ -552,9 +559,7 @@ ul.social_links {
   padding: 0 0 30px 0;
   position: relative;
   &-block {
-    position: relative;
-    z-index: 3;
-    margin-top: -211px;
+
     @media (max-width: $screen-sm-max) {
       margin-top: 20px;
     }
@@ -2081,5 +2086,208 @@ ul.social_links {
   {
     width: 33.33333333%;
     float: left;
+  }
+}
+.page-node-12
+{
+  .main{
+    overflow: hidden;
+  }
+  .toptitle
+  {
+    background: #d1f1f1 !important;
+    height: auto;
+    h1{
+      color: #313b4b;
+      position: static;
+      padding: 30px 0 30px 0;
+      margin: 0;
+    }
+    .scroll-down-link
+    {
+      display: none;
+    }
+  }
+}
+.section-full-width
+{
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  padding: 20px 0;
+  &.__bluebgs
+  {
+    background: #d1f1f1;
+  }
+  &.__darkbluebgs
+  {
+    color: white;
+    background: #316cbd;
+    padding: 30px 0;
+  }
+  h4{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px 0 10px 0;
+    &.__bigmarginh4
+    {
+      margin: 5px 0 30px 0;
+    }
+  }
+}
+.footer-privacy
+{
+  padding: 15px 0;
+}
+.blue_btn
+{
+  color: white;
+  font-size: 18px;
+  padding: 5px 20px;
+  text-decoration: none;
+  background: $brand-primary;
+  display: inline-block;
+  transition: all .5s ease-in-out;
+  &:hover{
+    color: white;
+    background: darken( $brand-primary, 10% );
+  }
+}
+.blog{
+  &_title{
+    background: $brand-primary;
+    color: white;
+    text-align: center;
+    font: 600 28px/1.5em $font-family-roboto;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+    @media (max-width: $screen-sm-max) {
+      font: 600 22px/1.5em $font-family-roboto;
+    }
+  }
+
+  &_list_title
+  {
+    background: url(../images/news_bg.jpg) no-repeat center ;
+    background-size: cover;
+    padding: 90px 20px;
+    @media (max-width: $screen-sm-max) {
+      padding: 30px 20px;
+    }
+      h1{
+        color: white;
+        font: 600 64px/1.5em $font-family-mont;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: $screen-sm-max) {
+          font: 600 34px/1.5em $font-family-mont;
+        }
+      }
+  }
+}
+.node-type-news
+{
+  .field-name-field-image
+  {
+    img{
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+  .field-name-body
+  {
+    padding: 0 0 40px 0;
+    p{
+      margin: 0 0 20px 0;
+    }
+  }
+  .blog_dateinfo
+  {
+    padding: 20px 0 25px 0;
+    margin: 0 0 20px 0;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 8px;
+      background: $brand-primary;
+    }
+  }
+}
+.view-news
+{
+  .views-row
+  {
+    padding: 20px 5%;
+    border: 1px solid #d9d9d9;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
+    margin: 50px 0;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 150px;
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 64%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 64%,rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    }
+    .field-name-field-image
+    {
+      img{
+        max-width: 100%;
+        height: auto !important;
+      }
+      margin: 0 0 20px 0;
+    }
+  }
+  h2{
+    font: 600 28px/1.5em $font-family-roboto;
+    margin: 0;
+    text-transform: uppercase;
+    @media (max-width: $screen-sm-max) {
+      font: 600 22px/1.5em $font-family-roboto;
+    }
+    a{
+      color: $dark-primary;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .blog_dateinfo
+  {
+    padding: 25px 0 20px 0;
+    margin: 20px 0 0 0;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 8px;
+      background: $brand-primary;
+    }
+  }
+}
+.region-content
+{
+  input.text-input, input.form-text
+  {
+    border: 1px solid #d9d9d9;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
   }
 }

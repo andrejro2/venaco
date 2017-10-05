@@ -32,6 +32,11 @@ function venaco_preprocess_page(&$variables) {
   if (!empty($variables['node']) && !empty($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
   }
+  $alias_parts = explode('/', drupal_get_path_alias());
+
+  if (count($alias_parts) && $alias_parts[0] == 'news' && !isset($alias_parts[1])) {
+    $variables['theme_hook_suggestions'][] = 'page__news';
+  }
 }
 /**
  * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
